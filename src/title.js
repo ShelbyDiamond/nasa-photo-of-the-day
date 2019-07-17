@@ -1,6 +1,5 @@
-import react from "react";
-import { directive } from "@babel/types";
+import React from "react";
 
-export default function Media(props) {
-  return <div>{props.nasaData}</div>;
+export default function Title(props) {
+  return <div>{props.nasaInfo.Title}</div>;
 }

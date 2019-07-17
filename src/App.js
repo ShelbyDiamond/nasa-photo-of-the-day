@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Title from "./title";
+import Date from "./date";
+import Media from "./media";
+import Description from "./description";
 
 function App() {
   const [NasaInfo, setNasaInfo] = useState([]);
@@ -20,10 +24,10 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <title NasaInfo={NasaInfo} />
-      <date NasaInfo={NasaInfo} />
-      <media NasaInfo={NasaInfo} />
-      <description NasaInfo={NasaInfo} />
+      <Title NasaInfo={NasaInfo} />
+      <Date NasaInfo={NasaInfo} />
+      <Media NasaInfo={NasaInfo} />
+      <Description NasaInfo={NasaInfo} />
     </div>
   );
 }
