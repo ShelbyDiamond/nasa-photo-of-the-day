@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Title(props) {
-  return <div>{props.nasaInfo.Title}</div>;
+function Title(props) {
+  console.log("Props for Title", props.NasaTitle);
+  return <div>{props.NasaTitle}</div>;
 }
+export default Title;

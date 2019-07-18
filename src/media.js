@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function media(props) {
-  return <div>{props.nasaInfo.media}</div>;
+function Media(props) {
+  return <div>{props.NasaMedia}</div>;
 }
+
+export default Media;

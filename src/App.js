@@ -1,33 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Title from "./title";
 import Date from "./date";
-import Media from "./media";
 import Description from "./description";
 
 function App() {
   const [NasaInfo, setNasaInfo] = useState([]);
 
-  const fetchData = () => {
+  useEffect(() => {
     axios
-
-      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=fec56teA2CxIM9FfEbFiTCdtLU9gNkL1j1UNz8Ti"
+      )
       .then(response => {
+        console.log(response);
         setNasaInfo(response.data);
       })
-      .catch(error => console.log(error));
-  };
-
-  useEffect(() => {
-    fetchData();
+      .catch(error => {
+        return setNasaInfo("error", error);
+      });
   }, []);
+
   return (
     <div className="App">
-      <Title NasaInfo={NasaInfo} />
-      <Date NasaInfo={NasaInfo} />
-      <Media NasaInfo={NasaInfo} />
-      <Description NasaInfo={NasaInfo} />
+      <div>
+        <Title NasaTitle={NasaTitle} />
+      </div>
+      <div>
+        <Date NasaDate={NasaDate} />
+      </div>
+      {/* <div>
+        <Img />
+      </div> */}
+      <div>
+        <Description NasaInfo={NasaInfo} />
+      </div>
     </div>
   );
 }
