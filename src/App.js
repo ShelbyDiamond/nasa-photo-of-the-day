@@ -28,6 +28,9 @@ function App() {
         <Title NasaTitle={NasaInfo} />
       </div>
       <div>
+        <img src="" />
+      </div>
+      <div>
         <Date NasaDate={NasaInfo} />
       </div>
       <div>
