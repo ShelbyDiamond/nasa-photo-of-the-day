@@ -25,14 +25,11 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Title NasaTitle={NasaTitle} />
+        <Title NasaTitle={NasaInfo} />
       </div>
       <div>
-        <Date NasaDate={NasaDate} />
+        <Date NasaDate={NasaInfo} />
       </div>
-      {/* <div>
-        <Img />
-      </div> */}
       <div>
         <Description NasaInfo={NasaInfo} />
       </div>
