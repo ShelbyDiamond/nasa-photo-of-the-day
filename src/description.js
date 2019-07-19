@@ -1,5 +1,6 @@
 import React from "react";
 
-export default function description(props) {
-  return <div>{props.nasaInfo.Description}</div>;
+function Description(props) {
+  return <div>{props.NasaInfo.explanation}</div>;
 }
+export default Description;
